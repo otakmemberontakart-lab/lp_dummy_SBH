@@ -3,1748 +3,833 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Super Brain Healing — Latih Ulang Otak, Tenangkan Tubuh, Pulihkan Hidupmu</title>
+<title>Super Brain Healing — Latih Ulang Otak, Tenangkan Tubuh</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ============================================
-   CSS VARIABLES — DESIGN SYSTEM
-   ============================================ */
 :root {
-  --color-primary: #3D6B57;
-  --color-primary-light: #5A8F74;
-  --color-primary-muted: #EAF0EC;
-  --color-accent: #C17A45;
-  --color-accent-light: #F5EAE0;
-  --color-bg: #FAFAF7;
-  --color-surface: #FFFFFF;
-  --color-text-primary: #1E2D26;
-  --color-text-secondary: #5C6E64;
-  --color-text-light: #9AAF9F;
-  --color-border: #DDE8DF;
-  --color-shadow: rgba(61,107,87,0.10);
-
-  --font-heading: 'Lora', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
-
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.25rem;
-  --text-5xl: 3rem;
-
-  --leading-tight: 1.2;
-  --leading-snug: 1.4;
-  --leading-normal: 1.6;
-  --leading-relaxed: 1.75;
-
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --space-24: 6rem;
-
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 32px;
-  --radius-full: 9999px;
-
-  --container-content: 680px;
-  --container-wide: 1100px;
-}
-
-/* ============================================
-   RESET & BASE
-   ============================================ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg);
-  -webkit-font-smoothing: antialiased;
-}
-
-img { max-width: 100%; height: auto; display: block; }
-
-/* ============================================
-   LAYOUT UTILITIES
-   ============================================ */
-.container {
-  max-width: var(--container-content);
-  margin: 0 auto;
-  padding: 0 var(--space-6);
-}
-
-.container-wide {
-  max-width: var(--container-wide);
-  margin: 0 auto;
-  padding: 0 var(--space-6);
-}
-
-.section {
-  padding: var(--space-16) 0;
-}
-
-.section-alt {
-  background-color: var(--color-primary-muted);
-}
-
-.section-accent {
-  background-color: var(--color-accent-light);
-}
-
-/* ============================================
-   TYPOGRAPHY
-   ============================================ */
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
-  line-height: var(--leading-snug);
-  color: var(--color-text-primary);
-}
-
-h1 { font-size: var(--text-4xl); font-weight: 700; }
-h2 { font-size: var(--text-3xl); font-weight: 600; }
-h3 { font-size: var(--text-2xl); font-weight: 600; }
-
-p { margin-bottom: var(--space-4); color: var(--color-text-primary); }
-p:last-child { margin-bottom: 0; }
-
-.pre-headline {
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin-bottom: var(--space-4);
-  display: block;
-}
-
-.lead {
-  font-size: var(--text-lg);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-secondary);
-}
-
-.pullquote {
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: var(--text-xl);
-  line-height: var(--leading-normal);
-  color: var(--color-primary);
-  border-left: 3px solid var(--color-accent);
-  padding: var(--space-4) var(--space-6);
-  margin: var(--space-8) 0;
-  background: var(--color-accent-light);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
-}
-
-.section-label {
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-primary-light);
-  margin-bottom: var(--space-3);
-  display: block;
-}
-
-/* ============================================
-   ANIMATIONS
-   ============================================ */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-@keyframes subtlePulse {
-  0%, 100% { box-shadow: 0 4px 24px rgba(193,122,69,0.25), 0 0 0 0 rgba(193,122,69,0.35); }
-  50%       { box-shadow: 0 4px 24px rgba(193,122,69,0.25), 0 0 0 10px rgba(193,122,69,0); }
-}
-
-@keyframes driftSlow {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-6px); }
-}
-
-[data-animate] {
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
-}
-
-[data-animate="fade-up"]  { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards; }
-[data-animate="fade-in"]  { animation: fadeIn 0.9s ease forwards; }
-
-[data-animate].is-visible { animation-play-state: running; }
-
-/* Stagger delays */
-.stagger > *:nth-child(1) { animation-delay: 0.0s; }
-.stagger > *:nth-child(2) { animation-delay: 0.1s; }
-.stagger > *:nth-child(3) { animation-delay: 0.2s; }
-.stagger > *:nth-child(4) { animation-delay: 0.3s; }
-.stagger > *:nth-child(5) { animation-delay: 0.4s; }
-.stagger > *:nth-child(6) { animation-delay: 0.5s; }
-.stagger > *:nth-child(7) { animation-delay: 0.6s; }
-.stagger > *:nth-child(8) { animation-delay: 0.7s; }
-
-/* ============================================
-   BUTTONS
-   ============================================ */
-.btn-primary {
-  display: inline-block;
-  background-color: var(--color-accent);
-  color: #fff;
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  font-weight: 700;
-  padding: 1rem 2rem;
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  animation: subtlePulse 2.5s ease-in-out infinite;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  letter-spacing: 0.01em;
-  line-height: 1.4;
-}
-
-.btn-primary:hover {
-  animation: none;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 32px rgba(193,122,69,0.40);
-}
-
-.btn-primary:active { transform: translateY(-1px); }
-
-.btn-block {
-  display: block;
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-/* ============================================
-   TRUST BADGES (below CTA)
-   ============================================ */
-.trust-badges {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-4);
-  margin-top: var(--space-6);
-}
-
-.trust-badge {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-  font-weight: 500;
-}
-
-.trust-badge svg {
-  color: var(--color-primary-light);
-  flex-shrink: 0;
-}
-
-/* ============================================
-   HERO SECTION
-   ============================================ */
-.hero {
-  position: relative;
-  min-height: 92vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background: var(--color-text-primary);
-}
-
-.hero-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  opacity: 0.55;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(30,45,38,0.20) 0%,
-    rgba(30,45,38,0.55) 50%,
-    rgba(30,45,38,0.85) 100%
-  );
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: var(--space-20) var(--space-6) var(--space-16);
-  max-width: var(--container-content);
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
-
-.hero-pre {
-  font-size: var(--text-sm);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.75);
-  margin-bottom: var(--space-6);
-  font-style: italic;
-  font-family: var(--font-heading);
-  display: block;
-  animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.1s both;
-}
-
-.hero h1 {
-  color: #fff;
-  font-size: clamp(1.75rem, 5vw, 3rem);
-  line-height: 1.25;
-  margin-bottom: var(--space-6);
-  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
-  animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s both;
-}
-
-.hero-sub {
-  font-size: var(--text-lg);
-  line-height: var(--leading-relaxed);
-  color: rgba(255,255,255,0.88);
-  margin-bottom: var(--space-10);
-  animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.35s both;
-}
-
-.hero-cta-wrap {
-  animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s both;
-}
-
-/* ============================================
-   PROBLEM SECTION
-   ============================================ */
-.problem-section {
-  padding: 0;
-  overflow: hidden;
-}
-
-.problem-image-wrap {
-  width: 100%;
-  max-height: 480px;
-  overflow: hidden;
-  position: relative;
-}
-
-.problem-image-wrap::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 120px;
-  background: linear-gradient(to bottom, transparent, var(--color-bg));
-}
-
-.problem-image-wrap img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  object-position: center 20%;
-  filter: saturate(0.7) brightness(0.95);
-}
-
-.problem-text {
-  padding: var(--space-10) var(--space-6) var(--space-16);
-  max-width: var(--container-content);
-  margin: 0 auto;
-}
-
-.problem-list {
-  list-style: none;
-  margin: var(--space-6) 0;
-}
-
-.problem-list li {
-  padding: var(--space-3) 0;
-  border-bottom: 1px solid var(--color-border);
-  font-size: var(--text-base);
-  color: var(--color-text-secondary);
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  line-height: var(--leading-normal);
-}
-
-.problem-list li:last-child { border-bottom: none; }
-
-.problem-list li::before {
-  content: '—';
-  color: var(--color-text-light);
-  flex-shrink: 0;
-  margin-top: 2px;
-  font-family: var(--font-heading);
-}
-
-.italic-emphasis {
-  font-family: var(--font-heading);
-  font-style: italic;
-  color: var(--color-primary);
-}
-
-/* ============================================
-   BIG IDEA SECTION
-   ============================================ */
-.big-idea {
-  background: var(--color-primary);
-  padding: var(--space-16) var(--space-6);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.big-idea::before {
-  content: '';
-  position: absolute;
-  top: -60px; right: -60px;
-  width: 240px; height: 240px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.04);
-  animation: driftSlow 10s ease-in-out infinite;
-}
-
-.big-idea::after {
-  content: '';
-  position: absolute;
-  bottom: -80px; left: -40px;
-  width: 300px; height: 300px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.03);
-  animation: driftSlow 14s ease-in-out infinite reverse;
-}
-
-.big-idea .container { position: relative; z-index: 1; }
-
-.big-idea .section-label { color: rgba(255,255,255,0.55); }
-
-.big-idea h2 {
-  color: #fff;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  margin-bottom: var(--space-6);
-  line-height: 1.3;
-}
-
-.big-idea p {
-  color: rgba(255,255,255,0.82);
-  font-size: var(--text-lg);
-  max-width: 580px;
-  margin: 0 auto var(--space-4);
-}
-
-.alarm-analogy {
-  background: rgba(255,255,255,0.10);
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: var(--radius-lg);
-  padding: var(--space-8);
-  margin: var(--space-10) auto 0;
-  max-width: 540px;
-  text-align: left;
-}
-
-.alarm-analogy p {
-  font-size: var(--text-base);
-  color: rgba(255,255,255,0.88);
-  margin-bottom: var(--space-3);
-}
-
-.alarm-analogy strong {
-  color: #fff;
-  font-family: var(--font-heading);
-  font-style: italic;
-}
-
-.mode-tag {
-  display: inline-block;
-  background: rgba(193,122,69,0.25);
-  border: 1px solid rgba(193,122,69,0.5);
-  color: #F5C99A;
-  font-size: var(--text-sm);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-full);
-  margin-top: var(--space-4);
-}
-
-/* ============================================
-   SOCIAL PROOF / TESTIMONIAL SECTION
-   ============================================ */
-.stories-section {
-  padding: var(--space-16) var(--space-6);
-  background: var(--color-bg);
-}
-
-.stories-section .section-title {
-  text-align: center;
-  margin-bottom: var(--space-12);
-}
-
-.story-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-8);
-  margin-bottom: var(--space-6);
-  position: relative;
-  box-shadow: 0 2px 16px var(--color-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.story-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px var(--color-shadow);
-}
-
-.story-card::before {
-  content: '\201C';
-  font-family: var(--font-heading);
-  font-size: 5rem;
-  line-height: 1;
-  color: var(--color-primary-muted);
-  position: absolute;
-  top: 0.5rem;
-  left: 1.25rem;
-  pointer-events: none;
-}
-
-.story-name {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: var(--text-xl);
-  color: var(--color-primary);
-  margin-bottom: var(--space-1);
-}
-
-.story-subtitle {
-  font-size: var(--text-sm);
-  color: var(--color-text-light);
-  font-weight: 500;
-  margin-bottom: var(--space-6);
-  letter-spacing: 0.03em;
-}
-
-.story-body {
-  font-size: var(--text-base);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-secondary);
-}
-
-.story-body p { margin-bottom: var(--space-3); }
-.story-body p:last-child { margin-bottom: 0; }
-
-.story-result {
-  margin-top: var(--space-6);
-  padding: var(--space-4) var(--space-5);
-  background: var(--color-primary-muted);
-  border-radius: var(--radius-md);
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: var(--text-base);
-  color: var(--color-primary);
-  border-left: 3px solid var(--color-primary-light);
-}
-
-/* ============================================
-   PRODUCT REVEAL
-   ============================================ */
-.product-section {
-  background: var(--color-primary-muted);
-  padding: var(--space-16) var(--space-6);
-  text-align: center;
-}
-
-.product-label {
-  font-size: var(--text-sm);
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-primary-light);
-  margin-bottom: var(--space-4);
-  display: block;
-}
-
-.product-title {
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  color: var(--color-primary);
-  margin-bottom: var(--space-2);
-}
-
-.product-subtitle-text {
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: var(--text-lg);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-10);
-}
-
-.mockup-wrap {
-  max-width: 480px;
-  margin: 0 auto var(--space-10);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(61,107,87,0.2), 0 4px 16px rgba(61,107,87,0.1);
-  transform: perspective(1200px) rotateY(-3deg) rotateX(2deg);
-  transition: transform 0.4s ease;
-}
-
-.mockup-wrap:hover {
-  transform: perspective(1200px) rotateY(0deg) rotateX(0deg);
-}
-
-.mockup-wrap img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.product-description {
-  max-width: 560px;
-  margin: 0 auto var(--space-10);
-  font-size: var(--text-lg);
-  color: var(--color-text-secondary);
-  text-align: left;
-}
-
-.benefit-list {
-  list-style: none;
-  text-align: left;
-  max-width: 560px;
-  margin: 0 auto;
-}
-
-.benefit-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-4);
-  padding: var(--space-4) 0;
-  border-bottom: 1px solid var(--color-border);
-  font-size: var(--text-base);
-  color: var(--color-text-primary);
-  line-height: var(--leading-normal);
-}
-
-.benefit-list li:last-child { border-bottom: none; }
-
-.benefit-icon {
-  width: 28px;
-  height: 28px;
-  background: var(--color-primary);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 0.75rem;
-  margin-top: 2px;
-}
-
-/* ============================================
-   HOW IT WORKS
-   ============================================ */
-.how-section {
-  padding: var(--space-16) var(--space-6);
-  background: var(--color-bg);
-}
-
-.steps-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-  margin-top: var(--space-10);
-}
-
-.step-card {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  padding: var(--space-8);
-  border: 1px solid var(--color-border);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 2px 12px var(--color-shadow);
-}
-
-.step-number {
-  font-family: var(--font-heading);
-  font-size: 4.5rem;
-  font-weight: 700;
-  color: var(--color-primary-muted);
-  line-height: 1;
-  position: absolute;
-  top: var(--space-4);
-  right: var(--space-6);
-}
-
-.step-title {
-  font-family: var(--font-heading);
-  font-size: var(--text-xl);
-  color: var(--color-primary);
-  margin-bottom: var(--space-3);
-  position: relative;
-}
-
-.step-body {
-  font-size: var(--text-base);
-  color: var(--color-text-secondary);
-  line-height: var(--leading-relaxed);
-  position: relative;
-}
-
-/* ============================================
-   VALUE STACK
-   ============================================ */
-.value-section {
-  background: var(--color-primary);
-  padding: var(--space-16) var(--space-6);
-  color: #fff;
-}
-
-.value-section .section-label { color: rgba(255,255,255,0.55); }
-.value-section h2 { color: #fff; text-align: center; margin-bottom: var(--space-10); }
-
-.value-cards {
-  display: grid;
-  gap: var(--space-4);
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.value-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: var(--radius-lg);
-  padding: var(--space-6) var(--space-8);
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-5);
-}
-
-.value-emoji {
-  font-size: 2rem;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.value-card-title {
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  color: #fff;
-  margin-bottom: var(--space-2);
-  font-weight: 600;
-}
-
-.value-card-desc {
-  font-size: var(--text-sm);
-  color: rgba(255,255,255,0.72);
-  line-height: var(--leading-normal);
-  margin: 0;
-}
-
-.bonus-tag {
-  display: inline-block;
-  background: var(--color-accent);
-  color: #fff;
-  font-size: var(--text-xs);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.2rem 0.6rem;
-  border-radius: var(--radius-full);
-  margin-bottom: var(--space-2);
-}
-
-/* ============================================
-   PRICE / CTA SECTION
-   ============================================ */
-.price-section {
-  padding: var(--space-16) var(--space-6);
-  background: var(--color-bg);
-  text-align: center;
-}
-
-.price-box {
-  background: var(--color-surface);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-10) var(--space-8);
-  max-width: 480px;
-  margin: 0 auto var(--space-10);
-  box-shadow: 0 8px 40px var(--color-shadow);
-}
-
-.price-label {
-  font-size: var(--text-sm);
-  color: var(--color-text-light);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: var(--space-4);
-}
-
-.price-amount {
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 8vw, 3.75rem);
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1;
-  margin-bottom: var(--space-2);
-}
-
-.price-note {
-  font-size: var(--text-sm);
-  color: var(--color-text-light);
-  margin-bottom: var(--space-8);
-}
-
-.price-includes {
-  text-align: left;
-  margin-bottom: var(--space-8);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  padding: var(--space-6) 0;
-}
-
-.price-includes-title {
-  font-size: var(--text-sm);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-4);
-}
-
-.price-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-  padding: var(--space-2) 0;
-  font-weight: 500;
-}
-
-.price-item svg { color: var(--color-primary-light); flex-shrink: 0; }
-
-/* ============================================
-   FOR WHOM SECTION
-   ============================================ */
-.for-whom {
-  padding: var(--space-16) var(--space-6);
-  background: var(--color-primary-muted);
-}
-
-.for-whom h2 { text-align: center; margin-bottom: var(--space-10); }
-
-.check-list {
-  list-style: none;
-  max-width: 560px;
-  margin: 0 auto var(--space-10);
-}
-
-.check-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-4);
-  padding: var(--space-4) 0;
-  border-bottom: 1px solid var(--color-border);
-  font-size: var(--text-base);
-  color: var(--color-text-primary);
-  line-height: var(--leading-normal);
-}
-
-.check-list li:last-child { border-bottom: none; }
-
-.check-icon {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 2px;
-  font-size: 0.7rem;
-}
-
-.check-icon.yes { background: var(--color-primary); color: #fff; }
-.check-icon.no  { background: #E8D5D5; color: #B04040; }
-
-.divider-text {
-  text-align: center;
-  font-size: var(--text-sm);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-text-light);
-  margin: var(--space-8) 0 var(--space-6);
-  position: relative;
-}
-
-.divider-text::before,
-.divider-text::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 30%;
-  height: 1px;
-  background: var(--color-border);
-}
-
-.divider-text::before { left: 0; }
-.divider-text::after  { right: 0; }
-
-/* ============================================
-   OBJECTION / FAQ SECTION
-   ============================================ */
-.faq-section {
-  padding: var(--space-16) var(--space-6);
-  background: var(--color-bg);
-}
-
-.faq-section h2 { text-align: center; margin-bottom: var(--space-10); }
-
-.faq-list {
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  margin-bottom: var(--space-3);
-  background: var(--color-surface);
-  overflow: hidden;
-  box-shadow: 0 2px 8px var(--color-shadow);
-  transition: box-shadow 0.3s ease;
-}
-
-.faq-item.open {
-  box-shadow: 0 4px 20px var(--color-shadow);
-  border-color: var(--color-primary-light);
-}
-
-.faq-trigger {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: var(--space-5) var(--space-6);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  cursor: pointer;
-  text-align: left;
-  min-height: 56px;
-}
-
-.faq-question {
-  font-family: var(--font-heading);
-  font-size: var(--text-base);
-  font-weight: 600;
-  color: var(--color-text-primary);
-  line-height: var(--leading-snug);
-  flex: 1;
-}
-
-.faq-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--color-primary-muted);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), background 0.3s ease;
-  color: var(--color-primary);
-}
-
-.faq-item.open .faq-icon {
-  transform: rotate(45deg);
-  background: var(--color-primary);
-  color: #fff;
-}
-
-.faq-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.22,1,0.36,1);
-}
-
-.faq-item.open .faq-content { max-height: 400px; }
-
-.faq-answer {
-  padding: 0 var(--space-6) var(--space-6);
-  font-size: var(--text-base);
-  color: var(--color-text-secondary);
-  line-height: var(--leading-relaxed);
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-5);
-}
-
-/* ============================================
-   CLOSING / FINAL CTA SECTION
-   ============================================ */
-.closing-section {
-  position: relative;
-  overflow: hidden;
-  min-height: 520px;
-  display: flex;
-  align-items: flex-end;
-}
-
-.closing-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  opacity: 0.5;
-}
-
-.closing-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(30,45,38,0.95) 0%,
-    rgba(30,45,38,0.70) 50%,
-    rgba(30,45,38,0.30) 100%
-  );
-}
-
-.closing-content {
-  position: relative;
-  z-index: 2;
-  padding: var(--space-16) var(--space-6);
-  max-width: var(--container-content);
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
-
-.closing-content h2 {
-  color: #fff;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  margin-bottom: var(--space-6);
-  line-height: 1.3;
-}
-
-.closing-content p {
-  color: rgba(255,255,255,0.82);
-  font-size: var(--text-lg);
-  margin-bottom: var(--space-4);
-  max-width: 540px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.closing-price {
-  font-family: var(--font-heading);
-  font-size: var(--text-2xl);
-  color: #fff;
-  margin: var(--space-8) 0 var(--space-6);
-  font-weight: 700;
-}
-
-/* ============================================
-   STICKY CTA BAR
-   ============================================ */
-.sticky-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--color-text-primary);
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding: var(--space-3) var(--space-6);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  z-index: 100;
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
-  box-shadow: 0 -4px 24px rgba(0,0,0,0.2);
-}
-
-.sticky-bar.visible { transform: translateY(0); }
-
-.sticky-bar-text {
-  font-size: var(--text-sm);
-  color: rgba(255,255,255,0.8);
-  font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.sticky-bar-text strong {
-  color: #fff;
-  display: block;
-  font-size: var(--text-base);
-}
-
-.sticky-bar .btn-primary {
-  animation: none;
-  font-size: var(--text-sm);
-  padding: 0.65rem 1.25rem;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-footer {
-  background: var(--color-text-primary);
-  padding: var(--space-10) var(--space-6);
-  text-align: center;
-}
-
-footer p {
-  color: rgba(255,255,255,0.45);
-  font-size: var(--text-xs);
-  margin-bottom: var(--space-2);
-}
-
-/* ============================================
-   DESKTOP RESPONSIVE
-   ============================================ */
-@media (min-width: 640px) {
-  .steps-grid { grid-template-columns: repeat(3, 1fr); }
-  .value-cards { grid-template-columns: 1fr; }
-}
-
-@media (min-width: 1024px) {
-  h1 { font-size: var(--text-5xl); }
-  .section { padding: var(--space-24) 0; }
-  .hero { min-height: 96vh; }
-  .hero-content { text-align: left; }
-  .hero h1 { font-size: clamp(2.5rem, 4vw, 3.75rem); max-width: 680px; }
-  .hero-sub { max-width: 560px; }
-  .hero-cta-wrap { text-align: left; }
-  .btn-block { margin: 0; }
-
-  .problem-section { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
-  .problem-image-wrap { max-height: none; height: 600px; }
-  .problem-image-wrap img { height: 100%; }
-  .problem-image-wrap::after { display: none; }
-  .problem-text { padding: var(--space-16) var(--space-12); max-width: 100%; }
-
-  .mockup-wrap { max-width: 560px; }
-
-  .value-cards { grid-template-columns: 1fr; }
-
-  .sticky-bar-text { overflow: visible; text-overflow: clip; }
+  --bg:       #F7F3ED;
+  --bg-warm:  #EDE5D8;
+  --surface:  #FDFBF8;
+  --teal:     #1D4A4A;
+  --teal-mid: #2A6363;
+  --teal-soft:#D0E4E4;
+  --teal-mute:#E8F2F2;
+  --terra:    #7A3E30;
+  --terra-mid:#B8614F;
+  --terra-s:  #EDD9D4;
+  --terra-m:  #F6EDEB;
+  --cta:      #C0522A;
+  --cta-h:    #A34321;
+  --cta-g:    rgba(192,82,42,.28);
+  --blush:    #DEB8AC;
+  --txt:      #1A2C2C;
+  --txt-mid:  #3A5050;
+  --txt-soft: #6A8585;
+  --txt-faint:#A0BCBC;
+  --border:   #DDD5C8;
+  --bord-t:   #B8D0D0;
+  --shadow:   rgba(29,74,74,.08);
+  --fh: 'Lora', Georgia, serif;
+  --fb: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --r-md:12px; --r-lg:20px; --r-xl:32px; --r-pill:9999px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{text-decoration:none}
+
+/* TYPE */
+h1,h2,h3{font-family:var(--fh);line-height:1.22;color:var(--teal)}
+h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:700}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:600}
+h3{font-size:clamp(1.05rem,2vw,1.25rem);font-weight:600}
+p{line-height:1.78;color:var(--txt-mid);margin-bottom:1rem}
+p:last-child{margin-bottom:0}
+
+.tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.75rem}
+.tag--terra{color:var(--terra-mid)}
+.tag--teal {color:var(--teal-mid)}
+.tag--light{color:rgba(255,255,255,.55)}
+
+/* CONTAINERS — key fix */
+/* Full bleed = width:100%, no max-width on outer */
+/* Inner content capped at 720px centered */
+.inner   {max-width:720px;  margin:0 auto;padding:0 1.5rem}
+.inner-md{max-width:860px;  margin:0 auto;padding:0 1.5rem}
+.inner-lg{max-width:1080px; margin:0 auto;padding:0 1.5rem}
+
+/* ANIMATIONS */
+@keyframes up  {from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes in  {from{opacity:0}to{opacity:1}}
+@keyframes glow{0%,100%{box-shadow:0 4px 20px var(--cta-g),0 0 0 0 var(--cta-g)}50%{box-shadow:0 4px 20px var(--cta-g),0 0 0 10px transparent}}
+@keyframes flt {0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+[data-a]{opacity:0}
+[data-a].on{animation:up .7s cubic-bezier(.22,1,.36,1) forwards}
+[data-a="i"].on{animation:in .8s ease forwards}
+.d2{animation-delay:.1s!important}.d3{animation-delay:.2s!important}
+.d4{animation-delay:.3s!important}.d5{animation-delay:.4s!important}
+
+/* BUTTON */
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--cta);color:#fff;font-family:var(--fb);font-size:1rem;font-weight:700;padding:1rem 2rem;border-radius:var(--r-pill);border:none;cursor:pointer;text-align:center;animation:glow 2.8s ease-in-out infinite;transition:transform .2s,background .2s;letter-spacing:.01em;line-height:1.3}
+.btn:hover{animation:none;transform:translateY(-3px);background:var(--cta-h);box-shadow:0 12px 36px var(--cta-g)}
+.btn-w{width:100%;max-width:460px;display:block;margin:0 auto}
+
+.trust{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;margin-top:1.25rem;align-items:center}
+.trust span{display:flex;align-items:center;gap:.375rem;font-size:.78rem;font-weight:500;color:var(--txt-soft)}
+
+/* ═══ HERO ══════════════════════════════════════════ */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  background:var(--teal);
+}
+.hero-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;object-position:top center;
+  opacity:.42;
+}
+.hero-grad{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(to right, rgba(29,74,74,.85) 0%, rgba(29,74,74,.35) 60%, rgba(29,74,74,.15) 100%),
+    linear-gradient(to top,   rgba(29,74,74,.98) 0%, rgba(29,74,74,.5)  40%, transparent 100%);
+}
+.hero-deco{
+  position:absolute;top:-80px;right:-80px;
+  width:420px;height:420px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.05);
+  animation:flt 14s ease-in-out infinite;
+  pointer-events:none;
+}
+.hero-deco::after{content:'';position:absolute;inset:50px;border-radius:50%;border:1px solid rgba(255,255,255,.04)}
+
+/* Hero content: full width on desktop, text on left half */
+.hero-content{
+  position:relative;z-index:2;
+  width:100%;
+  padding:5rem 1.5rem 4rem;
+}
+.hero-inner{
+  max-width:640px;   /* text column width */
+  /* NO margin:auto — stays left-aligned on desktop */
+}
+
+.hero-pre{
+  display:block;
+  font-family:var(--fh);font-style:italic;
+  font-size:.95rem;color:rgba(255,255,255,.65);
+  margin-bottom:1.25rem;
+  animation:up .8s cubic-bezier(.22,1,.36,1) .1s both;
+}
+.hero h1{
+  color:#fff;
+  text-shadow:0 2px 20px rgba(0,0,0,.25);
+  margin-bottom:1.25rem;
+  animation:up .8s cubic-bezier(.22,1,.36,1) .22s both;
+}
+.hero-sub{
+  font-size:1.05rem;line-height:1.72;
+  color:rgba(255,255,255,.80);
+  margin-bottom:2rem;
+  animation:up .8s cubic-bezier(.22,1,.36,1) .36s both;
+}
+.hero-cta{animation:up .8s cubic-bezier(.22,1,.36,1) .5s both}
+
+.hero-scroll{
+  position:absolute;bottom:1.25rem;left:50%;transform:translateX(-50%);
+  z-index:3;display:flex;flex-direction:column;align-items:center;gap:.375rem;
+  opacity:.38;animation:in 1s ease 1.4s both;pointer-events:none;
+}
+.hero-scroll-line{width:1px;height:32px;background:linear-gradient(to bottom,rgba(255,255,255,.8),transparent);animation:flt 2s ease-in-out infinite}
+.hero-scroll-txt{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+
+/* ═══ PROBLEM ════════════════════════════════════════ */
+.problem{background:var(--bg);overflow:hidden}
+
+/* Mobile: stacked. Desktop: side by side */
+.problem-grid{display:grid;grid-template-columns:1fr}
+
+.problem-img-col{
+  position:relative;
+  height:300px;
+  background:var(--teal);
+  overflow:hidden;
+}
+.problem-img-col img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center 15%;
+  filter:saturate(.65) brightness(.88);
+  position:relative;z-index:1;
+}
+.problem-img-col::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:80px;
+  background:linear-gradient(to bottom,transparent,var(--bg));
+  z-index:2;
+}
+
+.problem-text{
+  padding:2.5rem 1.5rem 3.5rem;
+}
+
+.problem-list{
+  list-style:none;
+  margin:1.25rem 0;
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  background:var(--surface);
+}
+.problem-list li{
+  padding:.875rem 1.25rem;
+  border-bottom:1px solid var(--border);
+  font-size:.93rem;line-height:1.65;color:var(--txt-mid);
+}
+.problem-list li:last-child{border-bottom:none}
+
+/* Simple italic inline — no separate column */
+.em{font-family:var(--fh);font-style:italic;color:var(--terra-mid)}
+
+.pullquote{
+  background:var(--terra-m);
+  border-left:3px solid var(--terra-mid);
+  border-radius:0 var(--r-md) var(--r-md) 0;
+  padding:1rem 1.25rem;
+  margin:1.5rem 0;
+  font-family:var(--fh);font-style:italic;
+  font-size:1.1rem;line-height:1.5;color:var(--terra);
+}
+
+/* ═══ BIG IDEA ═══════════════════════════════════════ */
+.bigidea{
+  background:var(--teal);
+  padding:4rem 1.5rem;
+  position:relative;overflow:hidden;
+  text-align:center;
+}
+.bigidea-orb{position:absolute;border-radius:50%;pointer-events:none}
+.bigidea-orb.a{width:340px;height:340px;top:-100px;right:-60px;background:radial-gradient(circle,rgba(45,110,110,.35) 0%,transparent 70%);animation:flt 12s ease-in-out infinite}
+.bigidea-orb.b{width:280px;height:280px;bottom:-80px;left:-50px;background:radial-gradient(circle,rgba(122,62,48,.2) 0%,transparent 70%);animation:flt 16s ease-in-out infinite reverse}
+
+.bigidea-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
+.bigidea h2{color:#fff;font-size:clamp(1.7rem,4.5vw,2.8rem);margin-bottom:1.25rem}
+.bigidea h2 em{font-style:italic;color:var(--blush)}
+.bigidea p{color:rgba(255,255,255,.75);font-size:1rem;max-width:560px;margin:0 auto .875rem}
+
+.alarm-box{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--r-lg);
+  padding:1.75rem 2rem;
+  margin:2rem auto 0;
+  max-width:540px;text-align:left;
+}
+.alarm-box p{font-size:.93rem;color:rgba(255,255,255,.82);margin-bottom:.75rem}
+.alarm-box p:last-of-type{margin-bottom:0}
+.alarm-box strong{color:#fff;font-family:var(--fh);font-style:italic}
+
+.mode-pill{
+  display:inline-flex;align-items:center;gap:.375rem;
+  background:rgba(192,82,42,.22);border:1px solid rgba(192,82,42,.45);
+  color:#F5B898;font-size:.72rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.3rem .85rem;border-radius:var(--r-pill);margin-top:1.25rem;
+}
+
+/* ═══ STORIES ════════════════════════════════════════ */
+.stories{background:var(--bg-warm);padding:3.5rem 1.5rem 4rem}
+
+.stories-head{text-align:center;margin-bottom:2.5rem;max-width:600px;margin-left:auto;margin-right:auto}
+.stories-head h2{margin-top:.5rem}
+
+/* 2-col grid on desktop */
+.stories-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.25rem;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.scard{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  padding:1.75rem;
+  box-shadow:0 2px 16px var(--shadow);
+  transition:transform .3s ease,box-shadow .3s ease;
+  /* No overflow:hidden — was clipping the name */
+  /* No ::before quote — was causing layout issues */
+}
+.scard:hover{transform:translateY(-4px);box-shadow:0 8px 36px var(--shadow)}
+.scard:nth-child(odd) {border-left:3px solid var(--teal-mid)}
+.scard:nth-child(even){border-left:3px solid var(--terra-mid)}
+
+.scard-name{
+  font-family:var(--fh);font-size:1.2rem;font-weight:700;
+  color:var(--teal);margin-bottom:.25rem;
+  /* Ensure name is never clipped */
+  overflow:visible;white-space:normal;
+}
+.scard-sub{
+  font-size:.72rem;font-weight:700;letter-spacing:.05em;
+  color:var(--txt-faint);margin-bottom:1.25rem;text-transform:uppercase;
+}
+.scard-body{
+  font-size:.91rem;line-height:1.72;color:var(--txt-mid);margin-bottom:1rem;
+}
+.scard-body em{font-family:var(--fh);font-style:italic;color:var(--teal-mid)}
+.scard-result{
+  border-radius:0 var(--r-md) var(--r-md) 0;
+  padding:.875rem 1rem;
+  font-family:var(--fh);font-style:italic;
+  font-size:.9rem;color:var(--teal);line-height:1.55;
+  border-left:3px solid var(--teal-mid);
+  background:var(--teal-mute);
+}
+.scard:nth-child(even) .scard-result{background:var(--terra-m);border-color:var(--terra-mid);color:var(--terra)}
+
+/* ═══ PRODUCT ════════════════════════════════════════ */
+.product{background:var(--bg);padding:4rem 1.5rem;text-align:center}
+
+.product-title{font-size:clamp(2rem,6vw,3.25rem);color:var(--teal);margin-bottom:.375rem}
+.product-tag{font-family:var(--fh);font-style:italic;font-size:1.05rem;color:var(--txt-soft);margin-bottom:2.5rem}
+
+.mockup-wrap{max-width:380px;margin:0 auto 2.5rem;position:relative}
+.mockup-wrap::before{
+  content:'';position:absolute;inset:-16px;border-radius:var(--r-xl);
+  background:radial-gradient(ellipse at center,var(--teal-soft) 0%,transparent 70%);
+  z-index:0;
+}
+.mockup-img{
+  position:relative;z-index:1;border-radius:var(--r-lg);width:100%;
+  box-shadow:0 20px 60px rgba(29,74,74,.2),0 4px 16px rgba(29,74,74,.1);
+  transform:perspective(900px) rotateY(-4deg) rotateX(2deg);
+  transition:transform .45s cubic-bezier(.22,1,.36,1);
+}
+.mockup-wrap:hover .mockup-img{transform:perspective(900px) rotateY(0) rotateX(0)}
+.mockup-fb{border-radius:var(--r-lg);height:320px;background:linear-gradient(135deg,var(--teal-soft),var(--terra-s));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;position:relative;z-index:1}
+
+/* Benefit list — centered max 560px */
+.blist{list-style:none;max-width:560px;margin:0 auto;text-align:left}
+.blist li{
+  display:flex;align-items:flex-start;gap:.875rem;
+  padding:.875rem 0;border-bottom:1px solid var(--border);
+  font-size:.92rem;line-height:1.65;color:var(--txt-mid);
+}
+.blist li:last-child{border-bottom:none}
+.bdot{
+  width:24px;height:24px;border-radius:50%;
+  background:var(--teal);color:var(--teal-soft);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:.6rem;font-weight:700;margin-top:2px;
+}
+
+/* ═══ HOW IT WORKS ═══════════════════════════════════ */
+.how{background:var(--teal);padding:4rem 1.5rem}
+
+.how-head{text-align:center;margin-bottom:2.5rem}
+.how-head h2{color:#fff}
+.how-head p{color:rgba(255,255,255,.6);max-width:440px;margin:.75rem auto 0;font-size:.93rem}
+
+.steps{display:grid;grid-template-columns:1fr;gap:1rem;max-width:900px;margin:0 auto}
+.step{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:var(--r-lg);
+  padding:1.75rem;position:relative;overflow:hidden;
+  transition:background .3s;
+}
+.step:hover{background:rgba(255,255,255,.09)}
+.step-num{
+  font-family:var(--fh);font-size:4.5rem;font-weight:700;
+  color:rgba(255,255,255,.06);position:absolute;
+  top:-8px;right:1.25rem;line-height:1;pointer-events:none;
+}
+.step-label{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blush);margin-bottom:.5rem}
+.step h3{color:#fff;font-size:1.1rem;margin-bottom:.5rem}
+.step p{color:rgba(255,255,255,.68);font-size:.9rem;line-height:1.7}
+
+/* ═══ VALUE STACK ════════════════════════════════════ */
+.value{background:var(--bg-warm);padding:4rem 1.5rem}
+.value-head{text-align:center;margin-bottom:2rem}
+.vcards{display:grid;gap:1rem;max-width:620px;margin:0 auto}
+.vcard{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start;
+  box-shadow:0 2px 12px var(--shadow);transition:transform .3s;
+}
+.vcard:hover{transform:translateY(-3px)}
+.vcard-icon{font-size:2rem;line-height:1;flex-shrink:0}
+.vcard-title{font-family:var(--fh);font-size:.97rem;font-weight:700;color:var(--teal);margin-bottom:.25rem}
+.vcard-desc{font-size:.83rem;color:var(--txt-soft);line-height:1.6;margin:0}
+.bonus-pill{display:inline-block;background:var(--terra-s);color:var(--terra);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.18rem .6rem;border-radius:var(--r-pill);margin-bottom:.375rem}
+
+/* ═══ ORDER ══════════════════════════════════════════ */
+.order{background:var(--bg);padding:4rem 1.5rem;text-align:center}
+.price-card{
+  background:var(--surface);
+  border:2px solid var(--bord-t);
+  border-radius:var(--r-xl);
+  padding:2.5rem 2rem;
+  max-width:440px;margin:2rem auto 0;
+  box-shadow:0 8px 48px var(--shadow);
+  position:relative;overflow:hidden;
+}
+.price-card::before{content:'';position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle at top right,var(--teal-mute),transparent 70%);pointer-events:none}
+.price-label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-faint);margin-bottom:.75rem}
+.price-amount{font-family:var(--fh);font-size:clamp(2.5rem,8vw,3.75rem);font-weight:700;color:var(--teal);line-height:1;margin-bottom:.375rem}
+.price-note{font-size:.78rem;color:var(--txt-faint);margin-bottom:1.75rem}
+.price-rows{text-align:left;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.25rem 0;margin-bottom:1.75rem}
+.price-row{display:flex;align-items:center;gap:.625rem;font-size:.85rem;color:var(--txt-mid);padding:.3rem 0;font-weight:500}
+.price-row-dot{width:18px;height:18px;border-radius:50%;background:var(--teal-soft);color:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.58rem;font-weight:700}
+
+/* ═══ FOR WHOM ═══════════════════════════════════════ */
+.forwhom{background:var(--teal-mute);padding:4rem 1.5rem}
+.forwhom-head{text-align:center;margin-bottom:2rem}
+
+.clist{list-style:none;max-width:560px;margin:0 auto}
+.clist li{display:flex;align-items:flex-start;gap:.875rem;padding:.75rem 0;border-bottom:1px solid var(--bord-t);font-size:.92rem;color:var(--txt-mid);line-height:1.6}
+.clist li:last-child{border-bottom:none}
+.ci{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.62rem;font-weight:700;margin-top:2px}
+.ci-y{background:var(--teal);color:var(--teal-soft)}
+.ci-n{background:var(--terra-s);color:var(--terra)}
+
+.or-div{position:relative;text-align:center;padding:2rem 0 1.25rem;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-faint)}
+.or-div::before,.or-div::after{content:'';position:absolute;top:50%;width:38%;height:1px;background:var(--bord-t)}
+.or-div::before{left:0}.or-div::after{right:0}
+
+/* ═══ FAQ ════════════════════════════════════════════ */
+.faq{background:var(--bg);padding:4rem 1.5rem}
+.faq-head{text-align:center;margin-bottom:2rem}
+.faq-list{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:.75rem}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;box-shadow:0 2px 10px var(--shadow);transition:border-color .3s,box-shadow .3s}
+.faq-item.open{border-color:var(--teal-mid);box-shadow:0 4px 24px var(--shadow)}
+.faq-btn{width:100%;background:none;border:none;padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;text-align:left;min-height:56px}
+.faq-q{font-family:var(--fh);font-size:.95rem;font-weight:600;color:var(--teal);line-height:1.4;flex:1}
+.faq-ico{width:28px;height:28px;border-radius:50%;background:var(--teal-mute);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--teal-mid);transition:transform .38s cubic-bezier(.22,1,.36,1),background .3s,color .3s}
+.faq-item.open .faq-ico{transform:rotate(45deg);background:var(--teal);color:#fff}
+.faq-panel{max-height:0;overflow:hidden;transition:max-height .42s cubic-bezier(.22,1,.36,1)}
+.faq-item.open .faq-panel{max-height:360px}
+.faq-ans{padding:0 1.25rem 1.25rem;border-top:1px solid var(--border);padding-top:1rem;font-size:.9rem;color:var(--txt-mid);line-height:1.75}
+
+/* ═══ CLOSING ════════════════════════════════════════ */
+.closing{position:relative;min-height:520px;display:flex;align-items:flex-end;overflow:hidden;background:var(--teal)}
+.closing-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.35}
+.closing-ovl{position:absolute;inset:0;background:linear-gradient(to top,rgba(29,74,74,.97) 0%,rgba(29,74,74,.75) 45%,rgba(29,74,74,.25) 100%)}
+.closing-content{position:relative;z-index:2;text-align:center;padding:4rem 1.5rem 3.5rem;max-width:640px;margin:0 auto;width:100%}
+.closing-content h2{color:#fff;font-size:clamp(1.5rem,4vw,2.3rem);margin-bottom:1.25rem}
+.closing-content p{color:rgba(255,255,255,.78);font-size:1rem;max-width:500px;margin:0 auto .875rem}
+.closing-price{font-family:var(--fh);font-size:1.3rem;font-weight:700;color:var(--blush);margin:1.75rem 0 1.25rem}
+
+/* ═══ STICKY BAR ═════════════════════════════════════ */
+.sticky{position:fixed;bottom:0;left:0;right:0;background:var(--txt);border-top:1px solid rgba(255,255,255,.08);padding:.75rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:200;transform:translateY(100%);transition:transform .42s cubic-bezier(.22,1,.36,1);box-shadow:0 -4px 32px rgba(0,0,0,.25)}
+.sticky.on{transform:translateY(0)}
+.sticky strong{display:block;color:#fff;font-size:.88rem;font-weight:700;white-space:nowrap}
+.sticky span{color:rgba(255,255,255,.5);font-size:.72rem}
+.sticky .btn{animation:none;font-size:.83rem;padding:.6rem 1.1rem;white-space:nowrap;flex-shrink:0}
+
+/* ═══ FOOTER ═════════════════════════════════════════ */
+footer{background:var(--txt);padding:2rem 1.5rem;text-align:center}
+footer p{color:rgba(255,255,255,.3);font-size:.72rem;line-height:1.7;margin-bottom:.375rem}
+
+/* ═══ RESPONSIVE ═════════════════════════════════════ */
+@media(min-width:768px){
+  /* Problem: 50/50 side by side */
+  .problem-grid{grid-template-columns:1fr 1fr;min-height:600px}
+  .problem-img-col{height:100%}
+  .problem-img-col::after{display:none}
+  .problem-text{padding:3.5rem 3rem 3.5rem 3rem;display:flex;flex-direction:column;justify-content:center}
+
+  /* Stories: 2 col */
+  .stories-grid{grid-template-columns:1fr 1fr}
+
+  /* Steps: 3 col */
+  .steps{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(min-width:1024px){
+  /* Hero: text left-aligned, larger content area */
+  .hero-content{
+    padding:6rem 8% 4.5rem;
+  }
+  .hero-inner{
+    max-width:620px;
+    /* Push text slightly left, image fills right naturally */
+  }
+
+  /* Problem text column wider */
+  .problem-text{padding:4rem 4rem 4rem 3.5rem}
+
+  /* Mockup bigger */
+  .mockup-wrap{max-width:420px}
+
+  /* Sticky bar */
+  .sticky strong{font-size:.95rem}
+  .sticky .btn{font-size:.9rem;padding:.7rem 1.4rem}
 }
 </style>
 </head>
 <body>
 
-<!-- ============================================
-     HERO SECTION
-     ============================================ -->
+<!-- ══ HERO ══════════════════════════════════════════ -->
 <section class="hero">
-  <img
-    class="hero-image"
+  <img class="hero-img"
     src="https://drive.google.com/thumbnail?id=1dYYfG02ForJnGkbRlU2Z7IQPNw24z8vv&sz=w1200"
-    alt="Wanita tenang di jendela pagi"
-    loading="eager"
-  >
-  <div class="hero-overlay"></div>
+    alt="" loading="eager" onerror="this.style.opacity='0'">
+  <div class="hero-deco"></div>
+  <div class="hero-grad"></div>
+
   <div class="hero-content">
-    <span class="hero-pre">Untuk kamu yang udah capek nyoba ini itu, tapi tubuh masih aja nggak mau nurut…</span>
-    <h1>Kenapa Tubuhmu Terus Bereaksi, Cemas, Nyeri, dan Gampang Banget Lelah — Padahal Kamu Udah Coba Segalanya?</h1>
-    <p class="hero-sub">
-      Bukan karena kamu kurang usaha. Bukan karena tubuhmu emang "bawaan susah". Jawabannya ada di satu tempat yang selama ini nggak pernah disentuh — <strong style="color:#fff">otakmu masih terjebak dalam mode bahaya.</strong> Dan ada cara sederhana buat ngajarin otakmu keluar dari sana. Cukup 5–10 menit sehari. Dari rumah.
-    </p>
-    <div class="hero-cta-wrap">
-      <a href="#order" class="btn-primary btn-block">Ya, Saya Mau Mulai Melatih Ulang Otak Saya Hari Ini →</a>
-      <div class="trust-badges" style="justify-content:flex-start;margin-top:1.25rem;">
-        <span class="trust-badge" style="color:rgba(255,255,255,0.65);">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Download langsung
-        </span>
-        <span class="trust-badge" style="color:rgba(255,255,255,0.65);">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Akses seumur hidup
-        </span>
-        <span class="trust-badge" style="color:rgba(255,255,255,0.65);">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Bayar sekali
-        </span>
+    <div class="hero-inner">
+      <span class="hero-pre">Untuk kamu yang udah capek nyoba ini itu, tapi tubuh masih aja nggak mau nurut…</span>
+      <h1>Kenapa Tubuhmu Terus Bereaksi, Cemas, Nyeri, dan Gampang Banget Lelah — Padahal Kamu Udah Coba Segalanya?</h1>
+      <p class="hero-sub">Bukan karena kurang usaha. Bukan bawaan susah. Jawabannya ada di satu tempat yang belum pernah disentuh — <strong style="color:#fff">otakmu masih terjebak dalam mode bahaya.</strong> Cukup 5–10 menit sehari untuk mengubahnya.</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-w" style="margin:0">Ya, Saya Mau Mulai Melatih Ulang Otak Saya →</a>
+        <div class="trust">
+          <span style="color:rgba(255,255,255,.58)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Download langsung</span>
+          <span style="color:rgba(255,255,255,.58)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Akses seumur hidup</span>
+          <span style="color:rgba(255,255,255,.58)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pembayaran aman</span>
+        </div>
       </div>
     </div>
   </div>
+  <div class="hero-scroll">
+    <span class="hero-scroll-txt">Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
 </section>
 
-<!-- ============================================
-     PROBLEM SECTION
-     ============================================ -->
-<section class="problem-section">
-  <div class="problem-image-wrap" data-animate="fade-in">
-    <img
-      src="https://drive.google.com/thumbnail?id=1DVPaz-J1G8gvhFrm_Pj9JeHhh9df4-nz&sz=w1200"
-      alt="Wanita kelelahan di pagi hari"
-      loading="lazy"
-    >
-  </div>
-  <div class="problem-text">
-    <span class="section-label" data-animate="fade-up">Kamu kenal rasanya...</span>
-    <h2 data-animate="fade-up">Hidup dengan Tubuh yang Nggak Bisa Dipercaya</h2>
-    <ul class="problem-list stagger" data-animate="fade-up">
-      <li>Bangun tidur, dan pikiran pertama yang muncul bukan rasa syukur — tapi langsung ngecek: <span class="italic-emphasis">"Hari ini tubuh baik-baik aja nggak ya?"</span></li>
-      <li>Makan sambil was-was. <span class="italic-emphasis">"Ini aman nggak? Nanti reaksi nggak?"</span></li>
-      <li>Keluar rumah dengan kepala penuh kalkulasi. <span class="italic-emphasis">"Kalau kecapean nanti kambuh. Kalau kepanasan nanti gatal lagi."</span></li>
-      <li>Tidur — tapi bangun tetap capek. Stres, padahal nggak ada kejadian besar. Nyeri yang datang pergi tanpa alasan.</li>
-      <li>Udah ke dokter, tes lab, MRI — hasilnya normal semua. Tapi rasanya sama sekali nggak normal.</li>
-      <li>Udah coba diet, eliminasi gluten, dairy-free, suplemen, probiotik, akupunktur — daftar yang "aman" makin pendek tiap bulannya.</li>
-    </ul>
-    <div class="pullquote" data-animate="fade-up">
-      "Kenapa aku nggak bisa sembuh-sembuh?"
+<!-- ══ PROBLEM ════════════════════════════════════════ -->
+<section class="problem">
+  <div class="problem-grid">
+    <div class="problem-img-col" data-a="i">
+      <img src="https://drive.google.com/thumbnail?id=1DVPaz-J1G8gvhFrm_Pj9JeHhh9df4-nz&sz=w1200" alt="" loading="lazy" onerror="this.style.opacity='0'">
     </div>
-    <p data-animate="fade-up">Hidup dalam tubuh yang nggak bisa dipercaya itu melelahkan. Bukan cuma fisik — tapi mental, emosional. Karena kamu nggak pernah benar-benar bisa santai. Selalu ada alarm kecil yang siaga. Selalu ada bagian dari kamu yang menghitung risiko.</p>
-  </div>
-</section>
-
-<!-- ============================================
-     BIG IDEA SECTION
-     ============================================ -->
-<section class="big-idea">
-  <div class="container">
-    <span class="section-label" data-animate="fade-up">Kenapa ini terjadi</span>
-    <h2 data-animate="fade-up">Tubuhmu Bukan Rusak.<br><em>Otakmu Hanya Terlalu Lama Hidup dalam Mode Bahaya.</em></h2>
-    <p data-animate="fade-up">Mungkin selama ini kamu cari solusi di tempat yang salah — makanan, hormon, organ, zat kimia. Sementara sumber masalahnya ada di sinyal yang dikirim otakmu ke seluruh tubuhmu setiap hari.</p>
-
-    <div class="alarm-analogy" data-animate="fade-up">
-      <p>Bayangin otakmu kayak <strong>alarm rumah.</strong> Dulu, alarm itu sangat berguna. Ia melindungimu saat ada ancaman nyata.</p>
-      <p>Tapi setelah bertahun-tahun menghadapi stres, sakit, rasa takut, dan ketidakpastian — alarmnya jadi terlalu sensitif.</p>
-      <p><strong>Sekarang daun jatuh pun dianggap maling.</strong></p>
-      <p>Makanan biasa dibaca sebagai ancaman. Sensasi tubuh normal langsung dianggap tanda bahaya. Situasi yang aman pun tetap terasa mengancam.</p>
-      <p style="margin-bottom:0;">Dan selama alarm itu terus bunyi — tubuhmu terus tegang, reaktif, mudah lelah, mudah kambuh. <strong>Bukan karena tubuhmu lemah. Tapi karena otakmu belum tahu bahwa situasinya sudah aman.</strong></p>
-      <div><span class="mode-tag">⚡ Mode Bahaya Kronis</span></div>
+    <div class="problem-text">
+      <span class="tag tag--terra" data-a>Kamu kenal rasanya…</span>
+      <h2 data-a class="d2">Hidup dengan Tubuh yang Nggak Bisa Dipercaya</h2>
+      <ul class="problem-list" data-a class="d3">
+        <li>Bangun tidur langsung ngecek — <span class="em">"Hari ini tubuh oke nggak ya?"</span></li>
+        <li>Makan sambil was-was. <span class="em">"Ini aman? Nanti reaksi nggak?"</span></li>
+        <li>Keluar rumah penuh kalkulasi. Tidur tapi bangun tetap capek.</li>
+        <li>Udah ke dokter, tes lab, MRI — hasilnya normal. Tapi rasanya nggak normal.</li>
+        <li>Udah coba diet, suplemen, akupunktur — daftar "aman" makin pendek tiap bulan.</li>
+      </ul>
+      <div class="pullquote" data-a>"Kenapa aku nggak bisa sembuh-sembuh?"</div>
+      <p data-a>Hidup dalam tubuh yang nggak bisa dipercaya itu melelahkan. Selalu ada alarm kecil yang siaga. Kamu nggak pernah benar-benar bisa santai.</p>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     SOCIAL PROOF / STORIES SECTION
-     ============================================ -->
-<section class="stories-section section">
-  <div class="container-wide">
-    <div class="stories-section section-title container">
-      <span class="section-label">Kisah nyata</span>
+<!-- ══ BIG IDEA ═══════════════════════════════════════ -->
+<section class="bigidea">
+  <div class="bigidea-orb a"></div>
+  <div class="bigidea-orb b"></div>
+  <div class="bigidea-inner">
+    <span class="tag tag--light" data-a>Kenapa ini terjadi</span>
+    <h2 data-a class="d2">Tubuhmu Bukan Rusak.<br><em>Otakmu Hanya Terlalu Lama Hidup dalam Mode Bahaya.</em></h2>
+    <p data-a class="d3">Selama ini kamu cari solusi di tempat yang salah. Makanan, hormon, organ. Sementara sumber masalahnya ada di sinyal yang otakmu kirim ke seluruh tubuhmu setiap hari.</p>
+    <div class="alarm-box" data-a class="d4">
+      <p>Bayangin otakmu kayak <strong>alarm rumah.</strong> Dulu berguna — melindungimu dari ancaman nyata.</p>
+      <p>Tapi setelah bertahun-tahun stres, sakit, dan ketidakpastian — alarmnya jadi terlalu sensitif. <strong>Sekarang daun jatuh pun dianggap maling.</strong></p>
+      <p>Dan selama alarm itu terus bunyi — tubuhmu terus tegang, reaktif, mudah kambuh. Bukan karena tubuhmu lemah. <strong>Tapi karena otakmu belum tahu bahwa situasinya udah aman.</strong></p>
+      <div><span class="mode-pill">⚡ Mode Bahaya Kronis</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STORIES ════════════════════════════════════════ -->
+<section class="stories">
+  <div class="inner-lg">
+    <div class="stories-head" data-a>
+      <span class="tag tag--teal">Kisah nyata</span>
       <h2>Yang Terjadi Ketika Otak Mulai Dilatih Ulang</h2>
     </div>
+    <div class="stories-grid">
 
-    <div style="max-width:720px;margin:0 auto;">
-
-      <div class="story-card" data-animate="fade-up">
-        <div class="story-name">Siska</div>
-        <div class="story-subtitle">14 tahun ketergantungan antihistamin</div>
-        <div class="story-body">
-          <p>Empat belas tahun. Itu berapa lama Siska bergantung pada antihistamin setiap malam cuma supaya bisa tidur. Gatalnya nggak pernah berhenti. Dokter sudah hafal. Obatnya sudah hafal. Tapi tubuhnya terus bereaksi seolah dunia ini penuh ancaman yang nggak kelihatan.</p>
-          <p>Lalu ia mulai mengikuti latihan dari panduan ini. Pelan-pelan. Nggak ada yang dipaksain. Nggak ada diet baru, nggak ada suplemen tambahan.</p>
-          <p>Hanya latihan mengajari otaknya cara membaca rasa aman — selama beberapa menit sehari.</p>
-        </div>
-        <div class="story-result">
-          Tiga minggu kemudian, rasa gatalnya berhenti total. Antihistamin yang udah 14 tahun ia telan setiap malam — diletakkan begitu saja. Ia sendiri yang nggak nyangka.
-        </div>
+      <div class="scard" data-a>
+        <div class="scard-name">Siska</div>
+        <div class="scard-sub">14 tahun ketergantungan antihistamin</div>
+        <p class="scard-body">14 tahun Siska bergantung pada antihistamin tiap malam cuma supaya bisa tidur. Tubuhnya terus bereaksi meski dokter dan obat sudah hafal. Lalu ia mulai latihan sederhana dari panduan ini — beberapa menit sehari. Hanya mengajari otaknya cara membaca rasa aman.</p>
+        <div class="scard-result">Tiga minggu kemudian, rasa gatalnya berhenti total. Antihistamin 14 tahun — diletakkan begitu saja. Ia sendiri yang nggak nyangka.</div>
       </div>
 
-      <div class="story-card" data-animate="fade-up">
-        <div class="story-name">Ocha</div>
-        <div class="story-subtitle">3 tahun imunoterapi, batuk hilang dalam 2 hari</div>
-        <div class="story-body">
-          <p>Ocha sudah menjalani imunoterapi selama tiga tahun. Setiap musim pancaroba, tubuhnya selalu bereaksi keras — batuk, tenggorokan sakit, alergi yang nggak kenal kompromi.</p>
-          <p>Dua hari setelah mulai mengikuti latihan dari panduan ini, ia nelepon. Suaranya nggak percaya.</p>
-          <p><em style="font-family:var(--font-heading);color:var(--color-primary);">"Batuknya hilang. Gejala alerginya hilang."</em></p>
-          <p>Bukan dalam tiga minggu. Bukan dalam tujuh hari. Dua hari.</p>
-        </div>
-        <div class="story-result">
-          Dan yang bikin ia makin terkejut — siklus menstruasinya yang selama ini sangat menyakitkan, sekarang jauh lebih ringan. Ia nggak lagi stres dan gampang marah setiap kali tanggal itu mendekat.
-        </div>
+      <div class="scard" data-a class="d2">
+        <div class="scard-name">Ocha</div>
+        <div class="scard-sub">3 tahun imunoterapi · batuk hilang dalam 2 hari</div>
+        <p class="scard-body">Tiga tahun imunoterapi, dan setiap musim pancaroba tubuhnya masih bereaksi keras. Dua hari setelah mulai latihan dari panduan ini, ia nelepon. Suaranya nggak percaya. <em>"Batuknya hilang. Gejala alerginya hilang."</em></p>
+        <div class="scard-result">Siklus menstruasinya yang selama ini sangat menyakitkan pun berubah — jauh lebih ringan.</div>
       </div>
 
-      <div class="story-card" data-animate="fade-up">
-        <div class="story-name">Lulu</div>
-        <div class="story-subtitle">"Ini nggak akan berhasil buat aku."</div>
-        <div class="story-body">
-          <p>Lulu datang dengan sikap yang jelas: <em style="font-family:var(--font-heading);color:var(--color-primary);">"Ini nggak akan berhasil buat aku."</em> Dan jujur — dengan daftar masalahnya yang panjang, wajar banget kalau ia skeptis. Hipotiroidisme kronis. Endometriosis. Kerusakan tulang belakang. Nyeri kronis. Radang sendi.</p>
-          <p>Ia sudah coba semuanya. Nutrisi. Homeopati. Akupunktur. Pengobatan fungsional. Semua yang bisa kamu bayangkan.</p>
-          <p>Tapi ia mencoba panduan ini. Pelan-pelan. Dengan latihan yang lembut, yang nggak memaksanya melakukan apapun yang menguras energi.</p>
-        </div>
-        <div class="story-result">
-          Dan pelan-pelan — sesuatu mulai bergeser. Hari demi hari, sedikit demi sedikit. Orang yang paling skeptis pun bisa merasakan perbedaannya.
-        </div>
+      <div class="scard" data-a>
+        <div class="scard-name">Lulu</div>
+        <div class="scard-sub">"Ini nggak akan berhasil buat aku."</div>
+        <p class="scard-body">Hipotiroidisme kronis, endometriosis, kerusakan tulang belakang, nyeri kronis. Lulu datang dengan skeptis penuh — dan wajar. Ia sudah coba segalanya. Tapi ia mencoba panduan ini, pelan-pelan.</p>
+        <div class="scard-result">Pelan-pelan, sesuatu mulai bergeser. Orang yang paling skeptis pun bisa merasakannya.</div>
       </div>
 
-      <div class="story-card" data-animate="fade-up">
-        <div class="story-name">Sarah</div>
-        <div class="story-subtitle">Dari mengurung diri — ke menyapa orang asing saat lari pagi</div>
-        <div class="story-body">
-          <p>Sarah dulu nggak bisa menyapa orang asing. Bukan karena pemalu. Tapi karena setiap bulan, selama beberapa hari menjelang siklus menstruasinya, ia berubah jadi orang yang berbeda. Nyerinya luar biasa — bukan cuma fisik, tapi mental. Ia jadi gampang stres, gampang marah. Mengurung diri. Menghindari semua orang.</p>
-          <p>Setelah menerapkan latihan dari panduan ini, siklus menstruasinya berubah. Nyerinya sesekali masih muncul — tapi ringan, dan ia bisa cepat mengatasinya.</p>
-        </div>
-        <div class="story-result">
-          Sekarang ia bisa lari pagi dan nyapa orang-orang yang berpapasan. Hal kecil — tapi buat Sarah, itu adalah hal yang selama bertahun-tahun nggak bisa ia lakukan.
-        </div>
+      <div class="scard" data-a class="d2">
+        <div class="scard-name">Sarah</div>
+        <div class="scard-sub">Dari mengurung diri ke menyapa orang asing saat lari pagi</div>
+        <p class="scard-body">Setiap bulan menjelang siklus, Sarah berubah — nyeri hebat, gampang marah, mengurung diri. Setelah latihan dari panduan ini, siklusnya berubah. Nyerinya masih muncul kadang — tapi ringan dan bisa diatasi cepat.</p>
+        <div class="scard-result">Sekarang ia bisa lari pagi dan nyapa orang asing. Hal yang selama bertahun-tahun nggak bisa ia lakukan.</div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     PRODUCT REVEAL
-     ============================================ -->
-<section class="product-section section">
-  <div class="container">
-    <span class="product-label" data-animate="fade-up">Memperkenalkan</span>
-    <h2 class="product-title" data-animate="fade-up">Super Brain Healing</h2>
-    <p class="product-subtitle-text" data-animate="fade-up">Latih Ulang Otak, Tenangkan Tubuh, Pulihkan Hidupmu</p>
+<!-- ══ PRODUCT ════════════════════════════════════════ -->
+<section class="product">
+  <div class="inner">
+    <span class="tag tag--teal" data-a>Memperkenalkan</span>
+    <h2 class="product-title" data-a class="d2">Super Brain Healing</h2>
+    <p class="product-tag" data-a class="d3">Latih Ulang Otak, Tenangkan Tubuh, Pulihkan Hidupmu</p>
 
-    <div class="mockup-wrap" data-animate="fade-up">
-      <img
+    <div class="mockup-wrap" data-a class="d3">
+      <img class="mockup-img" id="mimg"
         src="https://drive.google.com/thumbnail?id=1axAx2wt_2UeobfKM5VvpBD99uVRTgnxi&sz=w1200"
-        alt="Mockup eBook Super Brain Healing"
-        loading="lazy"
-      >
+        alt="eBook Super Brain Healing" loading="lazy"
+        onerror="this.style.display='none';document.getElementById('mfb').style.display='flex'">
+      <div class="mockup-fb" id="mfb" style="display:none">
+        <span style="font-family:var(--fh);font-size:1rem;color:var(--teal-mid);font-weight:600">📗 Super Brain Healing</span>
+        <span style="font-size:.78rem;color:var(--teal-mid)">+ 2 Bonus Eksklusif</span>
+      </div>
     </div>
 
-    <p class="product-description" data-animate="fade-up">
-      Panduan brain retraining 7 hari yang ngebantu kamu ngerti kenapa tubuhmu terus bereaksi — lalu nuntun kamu langkah demi langkah buat ngirim sinyal aman ke otak dan sistem sarafmu, dengan latihan pendek yang bisa langsung dipraktikkan mulai hari ini. Ditulis dalam bahasa yang kamu ngerti, buat situasi yang benar-benar kamu alami.
-    </p>
+    <p style="max-width:520px;margin:0 auto 2rem;text-align:left;font-size:.95rem" data-a>Panduan brain retraining 7 hari — membantu kamu ngerti kenapa tubuhmu terus bereaksi, lalu nuntun langkah demi langkah buat ngirim sinyal aman ke otak dan sistem sarafmu. Cukup 5–10 menit sehari.</p>
 
-    <ul class="benefit-list stagger" data-animate="fade-up">
-      <li>
-        <span class="benefit-icon">✦</span>
-        <span><strong>Akhirnya ngerti</strong> kenapa tubuhmu terus bereaksi meski udah coba segalanya — dan berhenti nyalahin diri sendiri karenanya</span>
-      </li>
-      <li>
-        <span class="benefit-icon">✦</span>
-        <span><strong>Kenali pola</strong> Mode Bahaya Kronis yang selama ini diam-diam ngendaliin respons tubuhmu tanpa kamu sadari</span>
-      </li>
-      <li>
-        <span class="benefit-icon">✦</span>
-        <span><strong>Pelajari</strong> Metode Reset Aman Otak — latihan 5 menit yang bisa langsung kamu coba malam ini</span>
-      </li>
-      <li>
-        <span class="benefit-icon">✦</span>
-        <span><strong>Ikutin</strong> Protokol Reset Aman 7 Hari — satu hari satu fokus, dari yang paling lembut, nggak ada yang dipaksain</span>
-      </li>
-      <li>
-        <span class="benefit-icon">✦</span>
-        <span><strong>Petakan</strong> pola alarm tubuhmu sendiri lewat Peta Alarm Tubuh — supaya kamu nggak lagi bereaksi otomatis kayak robot yang dikendaliin rasa takut</span>
-      </li>
-      <li>
-        <span class="benefit-icon">✦</span>
-        <span><strong>Pegang</strong> Checklist Saat Tubuh Bereaksi — buat momen-momen ketika gejala tiba-tiba muncul dan kamu butuh pegangan yang jelas</span>
-      </li>
+    <ul class="blist" data-a class="d2">
+      <li><span class="bdot">✦</span><span><strong>Akhirnya ngerti</strong> kenapa tubuhmu terus bereaksi — dan berhenti nyalahin diri sendiri</span></li>
+      <li><span class="bdot">✦</span><span><strong>Kenali</strong> pola Mode Bahaya Kronis yang selama ini diam-diam ngendaliin tubuhmu</span></li>
+      <li><span class="bdot">✦</span><span><strong>Pelajari</strong> Metode Reset Aman Otak — latihan 5 menit yang bisa dicoba malam ini</span></li>
+      <li><span class="bdot">✦</span><span><strong>Ikutin</strong> Protokol 7 Hari — satu hari satu fokus, dari yang paling lembut</span></li>
+      <li><span class="bdot">✦</span><span><strong>Petakan</strong> alarm tubuhmu sendiri & pegang Checklist Saat Tubuh Bereaksi</span></li>
     </ul>
   </div>
 </section>
 
-<!-- ============================================
-     HOW IT WORKS
-     ============================================ -->
-<section class="how-section section">
-  <div class="container">
-    <span class="section-label" data-animate="fade-up">Cara kerjanya</span>
-    <h2 data-animate="fade-up">Mulainya Semudah 3 Langkah</h2>
-    <div class="steps-grid stagger" data-animate="fade-up">
-      <div class="step-card">
-        <span class="step-number">1</span>
-        <h3 class="step-title">Baca &amp; Pahami Dulu</h3>
-        <p class="step-body">Di hari pertama, kamu bakal ngerti — mungkin untuk pertama kalinya — kenapa tubuhmu bereaksi seperti ini. Bukan karena kamu rusak. Bukan karena kamu lemah. Pemahaman ini aja udah ngubah cara kamu ngeliat tubuhmu.</p>
+<!-- ══ HOW IT WORKS ═══════════════════════════════════ -->
+<section class="how">
+  <div class="inner-lg">
+    <div class="how-head" data-a>
+      <span class="tag tag--light">Cara kerjanya</span>
+      <h2>Mulainya Semudah 3 Langkah</h2>
+      <p>Dirancang untuk orang yang energinya sudah terbatas.</p>
+    </div>
+    <div class="steps">
+      <div class="step" data-a>
+        <span class="step-num">1</span>
+        <div class="step-label">Hari pertama</div>
+        <h3>Baca &amp; Pahami</h3>
+        <p>Kamu bakal ngerti kenapa tubuhmu bereaksi seperti ini. Pemahaman ini aja udah ngubah cara kamu ngeliat tubuhmu sendiri.</p>
       </div>
-      <div class="step-card">
-        <span class="step-number">2</span>
-        <h3 class="step-title">Ikutin Protokol 7 Hari</h3>
-        <p class="step-body">Setiap hari ada satu fokus. Setiap latihan cuma 5–10 menit. Dimulai dari yang paling lembut. Nggak ada yang bikin kamu overwhelmed. Nggak ada yang menguras sisa energimu.</p>
+      <div class="step" data-a class="d2">
+        <span class="step-num">2</span>
+        <div class="step-label">Hari 1–7</div>
+        <h3>Ikutin Protokol 7 Hari</h3>
+        <p>Setiap hari satu fokus. 5–10 menit. Dari yang paling lembut. Nggak ada yang memaksamu.</p>
       </div>
-      <div class="step-card">
-        <span class="step-number">3</span>
-        <h3 class="step-title">Rasain Pergeseran Pertama</h3>
-        <p class="step-body">Satu momen kecil yang berbeda. <em>"Tadi aku nggak langsung panik."</em> Atau <em>"Semalam tidurku sedikit lebih tenang."</em> Itu tandanya jalur baru mulai terbentuk di otakmu.</p>
+      <div class="step" data-a class="d3">
+        <span class="step-num">3</span>
+        <div class="step-label">Mulai terasa</div>
+        <h3>Rasain Pergeserannya</h3>
+        <p><em style="color:var(--blush);font-style:italic">"Tadi aku nggak langsung panik."</em> Itu tandanya jalur baru mulai terbentuk di otakmu.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     VALUE STACK
-     ============================================ -->
-<section class="value-section section">
-  <div class="container">
-    <span class="section-label" data-animate="fade-up">Yang kamu dapetin</span>
-    <h2 data-animate="fade-up">Semua yang Kamu Butuhkan<br>untuk Mulai Reset Otakmu</h2>
-    <div class="value-cards stagger" data-animate="fade-up">
-      <div class="value-card">
-        <span class="value-emoji">📗</span>
+<!-- ══ VALUE STACK ════════════════════════════════════ -->
+<section class="value">
+  <div class="inner">
+    <div class="value-head" data-a>
+      <span class="tag tag--teal">Yang kamu dapetin</span>
+      <h2>Satu Paket Lengkap untuk Mulai Reset</h2>
+    </div>
+    <div class="vcards">
+      <div class="vcard" data-a>
+        <div class="vcard-icon">📗</div>
         <div>
-          <div class="value-card-title">eBook Super Brain Healing — Panduan Utama</div>
-          <p class="value-card-desc">Panduan lengkap brain retraining dalam Bahasa Indonesia. Langsung bisa dibaca, langsung dipraktikkan. Nggak ada teori ribet, nggak ada jargon yang bikin pusing.</p>
+          <div class="vcard-title">eBook Super Brain Healing</div>
+          <p class="vcard-desc">Panduan lengkap brain retraining. Langsung bisa dibaca, langsung dipraktikkan. Bahasa Indonesia, nggak ada teori berat.</p>
         </div>
       </div>
-      <div class="value-card">
-        <span class="value-emoji">📘</span>
+      <div class="vcard" data-a class="d2">
+        <div class="vcard-icon">📘</div>
         <div>
-          <span class="bonus-tag">Bonus 1</span>
-          <div class="value-card-title">Workbook Reset Aman Otak 7 Hari</div>
-          <p class="value-card-desc">Template lengkap: Peta Alarm Tubuh, Tracker Harian, Rencana 14 Hari Lanjutan. Semua tools yang kamu butuhin buat praktik nyata — bukan sekadar baca lalu lupain.</p>
+          <span class="bonus-pill">Bonus 1</span>
+          <div class="vcard-title">Workbook Reset Aman Otak 7 Hari</div>
+          <p class="vcard-desc">Peta Alarm Tubuh, Tracker Harian, Rencana 14 Hari Lanjutan. Buat praktik nyata.</p>
         </div>
       </div>
-      <div class="value-card">
-        <span class="value-emoji">📙</span>
+      <div class="vcard" data-a class="d3">
+        <div class="vcard-icon">📙</div>
         <div>
-          <span class="bonus-tag">Bonus 2</span>
-          <div class="value-card-title">Emergency Reset Kit</div>
-          <p class="value-card-desc">Kit darurat buat momen ketika tubuh tiba-tiba bereaksi keras. Checklist cepat, script aman, panduan singkat buat keluar dari spiral — tanpa harus panik sendirian.</p>
+          <span class="bonus-pill">Bonus 2</span>
+          <div class="vcard-title">Emergency Reset Kit</div>
+          <p class="vcard-desc">Checklist cepat buat momen ketika tubuh tiba-tiba bereaksi keras. Langsung bisa dipakai.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     PRICE / ORDER SECTION
-     ============================================ -->
-<section class="price-section section" id="order">
-  <div class="container">
-    <span class="section-label" data-animate="fade-up">Dapatkan sekarang</span>
-    <h2 data-animate="fade-up" style="margin-bottom:var(--space-10);">Mulai Reset Otakmu Hari Ini</h2>
-
-    <div class="price-box" data-animate="fade-up">
+<!-- ══ ORDER ══════════════════════════════════════════ -->
+<section class="order" id="order">
+  <div class="inner">
+    <span class="tag tag--teal" data-a>Dapatkan sekarang</span>
+    <h2 data-a class="d2">Mulai Reset Otakmu Hari Ini</h2>
+    <div class="price-card" data-a class="d3">
       <div class="price-label">Total investasimu</div>
       <div class="price-amount">Rp127.000</div>
-      <div class="price-note">Sekali bayar. Akses seumur hidup.</div>
-
-      <div class="price-includes">
-        <div class="price-includes-title">Yang kamu dapet:</div>
-        <div class="price-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          eBook Super Brain Healing (Panduan Utama)
-        </div>
-        <div class="price-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Bonus 1: Workbook Reset Aman Otak 7 Hari
-        </div>
-        <div class="price-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Bonus 2: Emergency Reset Kit
-        </div>
-        <div class="price-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Format PDF — baca di HP, tablet, atau laptop
-        </div>
-        <div class="price-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Download langsung setelah pembayaran
-        </div>
+      <div class="price-note">Sekali bayar · Akses seumur hidup</div>
+      <div class="price-rows">
+        <div class="price-row"><span class="price-row-dot">✓</span>eBook Super Brain Healing</div>
+        <div class="price-row"><span class="price-row-dot">✓</span>Bonus 1: Workbook Reset Aman Otak 7 Hari</div>
+        <div class="price-row"><span class="price-row-dot">✓</span>Bonus 2: Emergency Reset Kit</div>
+        <div class="price-row"><span class="price-row-dot">✓</span>Format PDF · Download langsung</div>
       </div>
-
-      <a href="#" class="btn-primary btn-block">Iya, Saya Mau Mulai — Kasih Saya Aksesnya Sekarang →</a>
-
-      <div class="trust-badges" style="margin-top:var(--space-5);">
-        <span class="trust-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Pembayaran aman
-        </span>
-        <span class="trust-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Akses seumur hidup
-        </span>
-        <span class="trust-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Bayar sekali
-        </span>
+      <a href="#" class="btn btn-w">Iya, Kasih Saya Aksesnya Sekarang →</a>
+      <div class="trust" style="justify-content:center;margin-top:1rem">
+        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pembayaran aman</span>
+        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Bayar sekali</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     FOR WHOM
-     ============================================ -->
-<section class="for-whom section">
-  <div class="container">
-    <span class="section-label" data-animate="fade-up">Ini buat siapa?</span>
-    <h2 data-animate="fade-up">Panduan Ini Buat Kamu Kalau…</h2>
-
-    <ul class="check-list stagger" data-animate="fade-up">
-      <li>
-        <span class="check-icon yes">✓</span>
-        <span>Tubuhmu gampang banget bereaksi — ke makanan, stres, cuaca, atau hal-hal kecil yang harusnya nggak masalah</span>
-      </li>
-      <li>
-        <span class="check-icon yes">✓</span>
-        <span>Kamu sering cemas tanpa alasan jelas, sulit tidur, mudah lelah, atau hidup dengan nyeri yang datang pergi</span>
-      </li>
-      <li>
-        <span class="check-icon yes">✓</span>
-        <span>Kamu udah coba banyak hal — obat, diet, suplemen, terapi — tapi hasilnya cuma sementara atau nggak ada sama sekali</span>
-      </li>
-      <li>
-        <span class="check-icon yes">✓</span>
-        <span>Kamu capek hidup dengan terus ngitung risiko dan menghindari pemicu</span>
-      </li>
-      <li>
-        <span class="check-icon yes">✓</span>
-        <span>Kamu mau solusi yang masuk akal, lembut, dan bisa dilakukan sendiri dari rumah</span>
-      </li>
-      <li>
-        <span class="check-icon yes">✓</span>
-        <span>Kamu nggak butuh "sembuh total hari ini" — kamu cuma butuh satu langkah pertama yang bisa dimulai sekarang</span>
-      </li>
+<!-- ══ FOR WHOM ═══════════════════════════════════════ -->
+<section class="forwhom">
+  <div class="inner">
+    <div class="forwhom-head" data-a>
+      <span class="tag tag--teal">Ini buat siapa?</span>
+      <h2>Panduan Ini Buat Kamu Kalau…</h2>
+    </div>
+    <ul class="clist" data-a>
+      <li><span class="ci ci-y">✓</span><span>Tubuhmu gampang bereaksi — ke makanan, stres, cuaca, atau hal kecil sekalipun</span></li>
+      <li><span class="ci ci-y">✓</span><span>Sering cemas tanpa alasan, sulit tidur, mudah lelah, atau hidup dengan nyeri yang datang pergi</span></li>
+      <li><span class="ci ci-y">✓</span><span>Udah coba banyak hal tapi hasilnya cuma sementara — atau nggak ada sama sekali</span></li>
+      <li><span class="ci ci-y">✓</span><span>Mau solusi yang lembut, masuk akal, dan bisa dilakukan sendiri dari rumah</span></li>
     </ul>
-
-    <div class="divider-text" data-animate="fade-up">Mungkin bukan buat kamu kalau</div>
-
-    <ul class="check-list stagger" data-animate="fade-up">
-      <li>
-        <span class="check-icon no">✕</span>
-        <span>Kamu lagi cari obat atau diagnosis — panduan ini bukan pengganti konsultasi medis</span>
-      </li>
-      <li>
-        <span class="check-icon no">✕</span>
-        <span>Kamu nggak bersedia meluangkan 5–10 menit sehari</span>
-      </li>
-      <li>
-        <span class="check-icon no">✕</span>
-        <span>Kamu maunya hasil instan tanpa proses apapun</span>
-      </li>
+    <div class="or-div" data-a>Mungkin bukan buat kamu kalau</div>
+    <ul class="clist" data-a>
+      <li><span class="ci ci-n">✕</span><span>Kamu lagi cari obat atau diagnosis — ini bukan pengganti konsultasi medis</span></li>
+      <li><span class="ci ci-n">✕</span><span>Kamu nggak bersedia meluangkan 5–10 menit sehari</span></li>
     </ul>
   </div>
 </section>
 
-<!-- ============================================
-     OBJECTION / FAQ (Collapsible)
-     ============================================ -->
-<section class="faq-section section">
-  <div class="container">
-    <span class="section-label" data-animate="fade-up">Pertanyaan yang sering muncul</span>
-    <h2 data-animate="fade-up">Kamu Mungkin Lagi Mikir…</h2>
-
-    <div class="faq-list" data-animate="fade-up">
-
+<!-- ══ FAQ ════════════════════════════════════════════ -->
+<section class="faq">
+  <div class="inner">
+    <div class="faq-head" data-a>
+      <span class="tag tag--teal">Pertanyaan yang sering muncul</span>
+      <h2>Kamu Mungkin Lagi Mikir…</h2>
+    </div>
+    <div class="faq-list" data-a class="d2">
       <div class="faq-item">
-        <button class="faq-trigger" aria-expanded="false">
-          <span class="faq-question">"Emang bisa se-simpel itu? Aku udah coba banyak hal yang lebih berat dari ini."</span>
-          <span class="faq-icon" aria-hidden="true">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </span>
+        <button class="faq-btn" aria-expanded="false">
+          <span class="faq-q">"Emang bisa se-simpel itu? Aku udah coba banyak hal yang lebih berat."</span>
+          <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-content" role="region">
-          <div class="faq-answer">
-            Justru itu. Selama ini kamu banyak nyoba solusi yang fokus ke tubuh — makanan, zat, organ, hormon. Tapi belum pernah ngelatih sistem alarm otak-tubuh yang ada di balik semua reaksi itu. Di situlah bedanya. Bukan soal seberapa berat usahanya — tapi soal apakah kamu nyentuh akar yang benar.
-          </div>
-        </div>
+        <div class="faq-panel"><div class="faq-ans">Selama ini kamu nyoba solusi yang fokus ke tubuh — makanan, zat, organ. Tapi belum pernah ngelatih sistem alarm otak-tubuh yang ada di balik semua reaksi itu. Di situlah bedanya.</div></div>
       </div>
-
       <div class="faq-item">
-        <button class="faq-trigger" aria-expanded="false">
-          <span class="faq-question">"Ini berarti sakitku cuma pikiran?"</span>
-          <span class="faq-icon" aria-hidden="true">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </span>
+        <button class="faq-btn" aria-expanded="false">
+          <span class="faq-q">"Ini berarti sakitku cuma pikiran?"</span>
+          <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-content" role="region">
-          <div class="faq-answer">
-            Nggak. Sama sekali nggak. Gejalamu nyata. Reaksi tubuhmu nyata. Rasa sakitmu nyata. Tapi otak dan tubuh itu saling memengaruhi secara langsung — dan melatih cara otak membaca rasa aman bukan berarti kamu menyangkal gejalamu. Ini berarti kamu nyentuh akar masalah yang selama ini nggak pernah disentuh.
-          </div>
-        </div>
+        <div class="faq-panel"><div class="faq-ans">Nggak. Gejalamu nyata. Tapi otak dan tubuh saling memengaruhi secara langsung — melatih cara otak membaca rasa aman bukan berarti menyangkal gejalamu. Justru ini nyentuh akar masalah yang selama ini nggak pernah disentuh.</div></div>
       </div>
-
       <div class="faq-item">
-        <button class="faq-trigger" aria-expanded="false">
-          <span class="faq-question">"Aku nggak punya energi buat program baru lagi."</span>
-          <span class="faq-icon" aria-hidden="true">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </span>
+        <button class="faq-btn" aria-expanded="false">
+          <span class="faq-q">"Aku nggak punya energi buat program baru lagi."</span>
+          <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-content" role="region">
-          <div class="faq-answer">
-            Latihannya 5–10 menit. Bisa dilakukan sambil berbaring. Nggak ada yang kamu harus "kuat" dulu buat mulai. Justru panduan ini dirancang buat orang yang energinya udah terbatas — karena itulah semuanya dibuat selembut dan sesingkat mungkin.
-          </div>
-        </div>
+        <div class="faq-panel"><div class="faq-ans">5–10 menit. Bisa dilakukan sambil berbaring. Justru panduan ini dirancang untuk orang yang energinya udah terbatas — makanya semuanya selembut dan sesingkat mungkin.</div></div>
       </div>
-
       <div class="faq-item">
-        <button class="faq-trigger" aria-expanded="false">
-          <span class="faq-question">"Kalau semudah ini, kenapa dokterku nggak pernah bilang?"</span>
-          <span class="faq-icon" aria-hidden="true">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </span>
+        <button class="faq-btn" aria-expanded="false">
+          <span class="faq-q">"Kalau semudah ini kenapa dokterku nggak pernah bilang?"</span>
+          <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-content" role="region">
-          <div class="faq-answer">
-            Karena brain retraining adalah bidang yang relatif baru, dan mayoritas sistem kesehatan konvensional memang belum fokus ke sini. Bukan berarti nggak valid — justru ini yang sedang banyak diteliti dalam ilmu neuroplastisitas modern. Kamu bukan kelinci percobaan. Siska, Ocha, Lulu, Sarah — mereka semua sudah lebih dulu membuktikannya.
-          </div>
-        </div>
+        <div class="faq-panel"><div class="faq-ans">Brain retraining adalah bidang yang relatif baru dan sistem kesehatan konvensional belum fokus ke sini. Bukan berarti nggak valid — ini yang sedang banyak diteliti dalam ilmu neuroplastisitas. Siska, Ocha, Lulu, Sarah sudah lebih dulu membuktikannya.</div></div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     CLOSING / FINAL CTA SECTION
-     ============================================ -->
-<section class="closing-section">
-  <img
-    class="closing-image"
+<!-- ══ CLOSING CTA ════════════════════════════════════ -->
+<section class="closing">
+  <img class="closing-img"
     src="https://drive.google.com/thumbnail?id=18TyHwxMLo7CvesIEzzWSF6mvpyNtv9YH&sz=w1200"
-    alt="Pemandangan terbuka penuh harapan"
-    loading="lazy"
-  >
-  <div class="closing-overlay"></div>
+    alt="" loading="lazy" onerror="this.style.opacity='0'">
+  <div class="closing-ovl"></div>
   <div class="closing-content">
-    <span class="section-label" style="color:rgba(255,255,255,0.55);" data-animate="fade-up">Satu hal yang aku tahu pasti</span>
-    <h2 data-animate="fade-up">Kamu Nggak Ada di Sini Secara Kebetulan.</h2>
-    <p data-animate="fade-up">Kamu di sini karena kamu udah cukup lama mencari. Udah cukup lama mencoba. Dan udah cukup lama hidup dengan tubuh yang rasanya nggak bisa kamu percaya.</p>
-    <p data-animate="fade-up">Panduan ini nggak janji keajaiban dalam semalam. Yang dijanjikan cuma ini: kamu bakal punya pemahaman yang berbeda tentang tubuhmu. Kamu bakal punya latihan yang bisa dilakukan sekarang. Dan untuk pertama kalinya dalam waktu lama, kamu bakal punya rasa — bahwa ada sesuatu yang bisa kamu lakukan selain menghindari dan menunggu.</p>
-    <p data-animate="fade-up"><strong style="color:#fff;">Itu udah lebih dari cukup buat mulai.</strong></p>
-    <div class="closing-price" data-animate="fade-up">Rp127.000 — Sekali bayar. Akses seumur hidup.</div>
-    <div data-animate="fade-up">
-      <a href="#order" class="btn-primary" style="font-size:1rem;padding:1.1rem 2.25rem;">Iya, Saya Mau Mulai — Kasih Saya Aksesnya Sekarang →</a>
-      <div class="trust-badges" style="margin-top:1.25rem;justify-content:center;">
-        <span class="trust-badge" style="color:rgba(255,255,255,0.65);">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Download langsung
-        </span>
-        <span class="trust-badge" style="color:rgba(255,255,255,0.65);">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Pembayaran aman
-        </span>
-      </div>
+    <span class="tag tag--light" data-a>Satu hal yang aku tahu pasti</span>
+    <h2 data-a class="d2">Kamu Nggak Ada di Sini Secara Kebetulan.</h2>
+    <p data-a class="d3">Kamu di sini karena sudah cukup lama mencari dan mencoba. Dan sudah cukup lama hidup dengan tubuh yang rasanya nggak bisa dipercaya.</p>
+    <p data-a class="d3">Panduan ini nggak janji keajaiban instan. Tapi kamu bakal punya pemahaman yang berbeda, latihan yang bisa dilakukan sekarang, dan untuk pertama kalinya — rasa bahwa ada sesuatu yang bisa kamu lakukan selain menghindari dan menunggu.</p>
+    <p data-a class="d4"><strong style="color:#fff">Itu sudah lebih dari cukup untuk mulai.</strong></p>
+    <div class="closing-price" data-a class="d4">Rp127.000 · Sekali bayar · Akses seumur hidup</div>
+    <div data-a class="d5">
+      <a href="#order" class="btn" style="padding:1.1rem 2.2rem">Iya, Saya Mau Mulai Sekarang →</a>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     FOOTER
-     ============================================ -->
+<!-- FOOTER -->
 <footer>
   <p>© 2025 Super Brain Healing. Semua hak dilindungi.</p>
   <p>Panduan ini bukan pengganti diagnosa, konsultasi, atau perawatan medis profesional.</p>
 </footer>
 
-<!-- ============================================
-     STICKY CTA BAR
-     ============================================ -->
-<div class="sticky-bar" id="stickyBar">
-  <div class="sticky-bar-text">
+<!-- STICKY BAR -->
+<div class="sticky" id="stickyBar">
+  <div>
     <strong>Super Brain Healing</strong>
-    eBook + 2 Bonus
+    <span>eBook + 2 Bonus Eksklusif</span>
   </div>
-  <a href="#order" class="btn-primary">Rp127.000 — Mulai Sekarang →</a>
+  <a href="#order" class="btn">Rp127.000 — Mulai →</a>
 </div>
 
-<!-- ============================================
-     JAVASCRIPT
-     ============================================ -->
 <script>
-  // --- Intersection Observer for animations ---
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        // Handle stagger children
-        const staggerParent = entry.target.querySelector('.stagger') || 
-                              (entry.target.classList.contains('stagger') ? entry.target : null);
-        if (staggerParent) {
-          Array.from(staggerParent.children).forEach((child, i) => {
-            child.style.animationDelay = `${i * 0.1}s`;
-            child.setAttribute('data-animate', 'fade-up');
-            child.style.animationPlayState = 'paused';
-            setTimeout(() => { child.classList.add('is-visible'); }, i * 100);
-          });
-        }
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
+// Scroll animations
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target) }})
+}, {threshold:.1});
+document.querySelectorAll('[data-a]').forEach(el => io.observe(el));
 
-  document.querySelectorAll('[data-animate]').forEach(el => {
-    observer.observe(el);
+// FAQ
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-btn').setAttribute('aria-expanded','false');
+    });
+    if(!open){ item.classList.add('open'); btn.setAttribute('aria-expanded','true') }
   });
+});
 
-  // --- FAQ Collapsible ---
-  document.querySelectorAll('.faq-trigger').forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      const item = trigger.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-
-      // Close all
-      document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
-      });
-
-      // Open clicked if was closed
-      if (!isOpen) {
-        item.classList.add('open');
-        trigger.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-
-  // --- Sticky Bar ---
-  const stickyBar = document.getElementById('stickyBar');
-  const heroSection = document.querySelector('.hero');
-
-  const stickyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        stickyBar.classList.add('visible');
-      } else {
-        stickyBar.classList.remove('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  stickyObserver.observe(heroSection);
+// Sticky
+const sticky = document.getElementById('stickyBar');
+new IntersectionObserver(es => {
+  sticky.classList.toggle('on', !es[0].isIntersecting);
+},{threshold:.05}).observe(document.querySelector('.hero'));
 </script>
-
 </body>
 </html>
